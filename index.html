@@ -39,11 +39,28 @@
             font-family: 'Times New Roman', Times, serif;
             font-style: normal;
         }
+        /* --- LICENCIA (CENTRADA EN LA PARTE INFERIOR) --- */
+        .licencia-bloque { 
+            position: absolute; 
+            bottom: 5px; /* Pegado al borde inferior del área general */
+            left: 50%; 
+            transform: translateX(-50%);
+            width: 100%; 
+            color: #64748b; /* slate-500 */
+            font-size: 11px; 
+            text-align: center; 
+            z-index: 150; 
+            line-height: 1.8; 
+            pointer-events: none; /* Para no interferir con clicks en el canvas si está encima */
+        }
+        .licencia-bloque a { color: #3b82f6; text-decoration: none; font-weight: bold; pointer-events: auto; }
+        .licencia-bloque a:hover { text-decoration: underline; }
+        .licencia-bloque img { display: inline-block; pointer-events: auto; }
     </style>
 </head>
-<body class="bg-slate-100 p-2 md:p-3 min-h-screen md:h-screen flex flex-col font-sans text-slate-800">
+<body class="bg-slate-100 p-2 md:p-3 min-h-screen md:h-screen flex flex-col font-sans text-slate-800 relative">
 
-    <div class="flex flex-col md:flex-row flex-1 gap-3 md:overflow-hidden">
+    <div class="flex flex-col md:flex-row flex-1 gap-3 md:overflow-hidden pb-12 md:pb-8"> <!-- Margen extra abajo para la licencia -->
         
         <!-- Panel Izquierdo (Parámetros) -->
         <div class="w-full md:w-40 bg-white p-3 rounded-xl shadow-lg flex flex-col gap-2 shrink-0 z-10 md:overflow-y-auto">
@@ -170,6 +187,18 @@
             </div>
         </div>
 
+    </div>
+
+    <!-- --- LICENCIA BLOQUE AÑADIDO --- -->
+    <div class="licencia-bloque">
+        <div style="margin-bottom: 2px;">
+            <img src="https://visitor-badge.laobi.icu/badge?page_id=EAG1964.phychem.lab&left_text=Visitas&left_color=gray&right_color=blue" alt="Visitas">
+        </div>
+        <p style="margin: 0;">
+            Autor: <strong>EAG1964</strong> | 2026 | 
+            <a href="https://EAG1964.github.io/">Panel Principal</a> | 
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank">Licencia CC BY-NC-SA 4.0</a>
+        </p>
     </div>
 
 <script>
